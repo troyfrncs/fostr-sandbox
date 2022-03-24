@@ -9,6 +9,12 @@
   margin-bottom: 24px;
 }
 
+.product-carousel__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+
 .product-carousel__list-img {
   width: 100%;
   height: 400px;
