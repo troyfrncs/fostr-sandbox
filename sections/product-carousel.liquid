@@ -55,22 +55,9 @@
 {% endstylesheet %}
 
 <script>
-  var mySwiper = new Swiper ('.product-carousel__list', {
-    speed: 400,
-    spaceBetween: 100,
-    initialSlide: 0,
-    autoHeight: false,
+  const swiper = new Swiper('.product-carousel__list', {
+    // Optional parameters
     direction: 'horizontal',
-    loop: true,
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    effect: 'slide',
-    spaceBetween: 60,
-    slidesPerView: 2,
-    centeredSlides: true,
-    slidesOffsetBefore: 0,
-    grabCursor: true,
+    loop: true
   });
-  
-  console.log('testddasdas');
 </script>
