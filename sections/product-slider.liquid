@@ -1,12 +1,23 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
-{% endschema %}
+{{ 'product-carousel.css' | asset_url | stylesheet_tag }}
 
-{% stylesheet %}
-{% endstylesheet %}
+<section class="product-carousel">
+  <div class="product-carousel__wrap">
+    <h2 class="product-carousel__wrap-title">{{ carouselTitle }}</h2>
 
-{% javascript %}
-{% endjavascript %}
+    <ul class="product-carousel__list">
+      {% for product in collections[section.settings.slider_collection].products %}
+        <li class="product-carousel__list-item">
+          <div class="product-carousel__list-wrap">
+            <div class="product-carousel__list-img">
+              <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" />
+            </div>
+            <h3 class="product-carousel__list-title">{{ product.title }}</h3>
+            <p class="product-carousel__list-desc">{{ product.text }}</p>
+            <span class="product-carousel__list-price">{{ product.price }}</span>
+            <a href="" class="product-carousel__list-btn">Add to Bag</a>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
