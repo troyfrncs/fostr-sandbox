@@ -8,9 +8,9 @@
   <div class="product-carousel__wrap">
     <h2 class="product-carousel__wrap-title">{{ section.settings.carousel_title }}</h2>
 
-    <div class="product-carousel__list">
+    <div class="product-carousel__list swiper-wrapper">
       {% for product in collections[section.settings.carousel_collection].products %}
-        <div class="product-carousel__list-item">
+        <div class="product-carousel__list-item swiper-slide">
           <div class="product-carousel__list-wrap">
             <div class="product-carousel__list-img">
               <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" />
@@ -26,39 +26,6 @@
   </div>
 </section>
 
-<div class="swiper-container">
-    
-    <!-- swiper slides -->
-    <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image: url(https://source.unsplash.com/random?sig=24);">
-            <h2>SIMPLE SWIPER</h2>
-        </div>
-        
-        <div class="swiper-slide" style="background-image: url(https://source.unsplash.com/random?sig=53);"> 
-            <h2>HELLO WORLD</h2>
-        </div>
-        
-        <div class="swiper-slide" style="background-image: url(https://source.unsplash.com/random?sig=52);">
-            <h2>Random Text 1</h2>
-        </div>
-        
-        <div class="swiper-slide" style="background-image: url(https://source.unsplash.com/random?sig=21);">
-        </div>
-        
-        <div class="swiper-slide" style="background-image: url(https://source.unsplash.com/random?sig=53);">
-        </div>
-    </div>
-    <!-- !swiper slides -->
-    
-    <!-- next / prev arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <!-- !next / prev arrows -->
-    
-    <!-- pagination dots -->
-    <div class="swiper-pagination"></div>
-    <!-- !pagination dots -->
-</div>
 
 {% schema %}
   {
@@ -90,23 +57,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js"></script>
 
 <script>
-  const swiper = new Swiper('.product-carousel__list', {
+  const swiper = new Swiper('.product-carousel', {
     // Optional parameters
     direction: 'horizontal',
     slidesPerView: 3,
     loop: true
   });
-  
-  var Swipes = new Swiper('.swiper-container', {
-    loop: true,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-    },
-});
-  
-  swiper();
 </script>
