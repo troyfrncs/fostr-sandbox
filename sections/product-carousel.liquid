@@ -10,7 +10,7 @@
 
     <div class="product-carousel__list">
       {% for product in collections[section.settings.carousel_collection].products %}
-        <div class="product-carousel__list-item">
+        <div class="product-carousel__list-item swiper-slide">
           <div class="product-carousel__list-wrap">
             <div class="product-carousel__list-img">
               <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" />
@@ -25,6 +25,7 @@
     </div>
   </div>
 </section>
+
 
 <div class="swiper-container">
     
@@ -90,7 +91,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js"></script>
 
 <script>
-  const swiper = new Swiper('.product-carousel__list', {
+  const Swipes = new Swipers('.product-carousel__list', {
     // Optional parameters
     direction: 'horizontal',
     slidesPerView: 3,
