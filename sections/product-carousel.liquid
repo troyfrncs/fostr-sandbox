@@ -2,10 +2,10 @@
 
 <section class="product-carousel">
   <div class="product-carousel__wrap">
-    <h2 class="product-carousel__wrap-title">{{ carouselTitle }}</h2>
+    <h2 class="product-carousel__wrap-title">{{ section.settings.carousel_title }}</h2>
 
     <ul class="product-carousel__list">
-      {% for product in collections[section.settings.slider_collection].products %}
+      {% for product in collections[section.settings.carousel_collection].products %}
         <li class="product-carousel__list-item">
           <div class="product-carousel__list-wrap">
             <div class="product-carousel__list-img">
@@ -20,10 +20,29 @@
       {% endfor %}
     </ul>
   </div>
-</section>{% schema %}
+</section>
+
+{% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Product Carousel",
+    "settings": [
+      {
+        "type": "text",
+        "id": "carousel_title",
+        "label": "Carousel Title"
+      },
+      {
+        "type": "collection",
+        "id": "carousel_collection",
+        "label": "Choose Collection to show on Carousel"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Carousel",
+        "category": "Sections"
+      }
+    ]
   }
 {% endschema %}
 
