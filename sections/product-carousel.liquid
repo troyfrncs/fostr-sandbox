@@ -2,31 +2,34 @@
 
 <!-- Import for Swiper Slider -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.css" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js"></script>
 <!-- End of Import for Swiper Slider -->
 
 <section class="product-carousel">
   <div class="product-carousel__wrap">
     <h2 class="product-carousel__wrap-title">{{ section.settings.carousel_title }}</h2>
-
-    <ul class="product-carousel__list swiper-wrapper">
-      {% for product in collections[section.settings.carousel_collection].products %}
-        <li class="product-carousel__list-item swiper-slide">
-          <div class="product-carousel__list-wrap">
-            <div class="product-carousel__list-img">
-              <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" />
+	
+    <div class="product-carousel__slide">
+      <ul class="product-carousel__list swiper-wrapper">
+        {% for product in collections[section.settings.carousel_collection].products %}
+          <li class="product-carousel__list-item swiper-slide">
+            <div class="product-carousel__list-wrap">
+              <div class="product-carousel__list-img">
+                <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" />
+              </div>
+              <h3 class="product-carousel__list-title">{{ product.title }}</h3>
+              <p class="product-carousel__list-desc">{{ product.description }}</p>
+              <span class="product-carousel__list-price">{{ product.price }}</span>
+              <a href="" class="product-carousel__list-btn">Add to Bag</a>
             </div>
-            <h3 class="product-carousel__list-title">{{ product.title }}</h3>
-            <p class="product-carousel__list-desc">{{ product.description }}</p>
-            <span class="product-carousel__list-price">{{ product.price }}</span>
-            <a href="" class="product-carousel__list-btn">Add to Bag</a>
-          </div>
-        </li>
-      {% endfor %}
-    </ul>
-    <!-- next / prev arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <!-- !next / prev arrows -->
+          </li>
+        {% endfor %}
+      </ul>
+      <!-- next / prev arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- !next / prev arrows -->
+    </div>
   </div>
 </section>
 
@@ -58,10 +61,8 @@
 {% stylesheet %}
 {% endstylesheet %}
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js"></script>
-
 <script>
-  const swiper = new Swiper('.product-carousel', {
+  const swiper = new Swiper('.product-carousel__slide', {
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
