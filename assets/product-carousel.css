@@ -40,7 +40,7 @@
   margin-bottom: 24px;
 }
 
-.product-carousel__list-link {
+.product-carousel__list-btn {
   appearance: none;
   display: inline-block;
   background-color: #ffffff;
@@ -52,7 +52,7 @@
   padding: 15px 114px; 
 }
 
-.product-carousel__list-link::before {
+.product-carousel__list-btn::before {
   content: '';
   background-color: #ffffff;
   border: 1px solid #000000;
