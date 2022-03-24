@@ -9,9 +9,9 @@
   <div class="product-carousel__wrap">
     <h2 class="product-carousel__wrap-title">{{ section.settings.carousel_title }}</h2>
 
-    <ul class="product-carousel__list">
+    <div class="product-carousel__list">
       {% for product in collections[section.settings.carousel_collection].products %}
-        <li class="product-carousel__list-item">
+        <div class="product-carousel__list-item">
           <div class="product-carousel__list-wrap">
             <div class="product-carousel__list-img">
               <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" />
@@ -21,9 +21,9 @@
             <span class="product-carousel__list-price">{{ product.price }}</span>
             <a href="" class="product-carousel__list-btn">Add to Bag</a>
           </div>
-        </li>
+        </div>
       {% endfor %}
-    </ul>
+    </div>
   </div>
 </section>
 
