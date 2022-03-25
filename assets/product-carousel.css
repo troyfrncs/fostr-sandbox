@@ -76,12 +76,26 @@
   margin-bottom: 12px;
 }
 
+.product-carousel__list-pricewrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .product-carousel__list-price {
   font-family: 'Open Sans', sans-serif;
   display: block;
   font-size: 12px;
   color: #4D4D4D;
   margin-bottom: 24px;
+}
+
+.product-carousel__list-price:first-child {
+  margin-right: 5px;
+}
+
+.product-carousel__list-price.compare {
+  color: #888888;
+  text-decoration: strikethrough;
 }
 
 .product-carousel__list-btn {
