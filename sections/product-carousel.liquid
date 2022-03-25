@@ -13,23 +13,22 @@
       <ul class="product-carousel__list swiper-wrapper">
         {% for product in collections[section.settings.carousel_collection].products %}
           <li class="product-carousel__list-item swiper-slide">
-            <div class="product-carousel__list-wrap">
-              <a href="{{ product.url }}" class="product-carousel__list-anchor">{{ product.title | escape }}</a>
-              {% if product_tags_string contains 'New' %}
-              	<span class="product-carousel__tag-new">new</span>
-              {% endif %}
-   
-              
+            <div class="product-carousel__list-wrap">              
               {% for tag in product.tags %}  
     			{% if tag contains 'New' %}
               		<span class="product-carousel__tag-new">new</span>
               	{% endif %}
               {% endfor %}
               
-              <div class="product-carousel__list-img">
-                <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" />
-              </div>
-              <h3 class="product-carousel__list-title">{{ product.title }}</h3>
+              <a href="{{ product.url }}" class="product-carousel__list-anchor">
+                <div class="product-carousel__list-img">
+                  <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" />
+                </div>
+              </a>
+              <a href="{{ product.url }}" class="product-carousel__list-anchor">
+               	<h3 class="product-carousel__list-title">{{ product.title }}</h3>
+              </a>
+              
               <p class="product-carousel__list-desc">{{ product.description }}</p>
               <div class="product-carousel__list-pricewrap">
                 <span class="product-carousel__list-price">{{ product.price | money }}</span>
