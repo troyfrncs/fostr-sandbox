@@ -33,8 +33,8 @@
               <p class="product-carousel__list-desc">{{ product.description }}</p>
               <div class="product-carousel__list-pricewrap">
                 <span class="product-carousel__list-price">{{ product.price | money }}</span>
-                {% if variant.price < variant.compare_at_price %}
-                	{{ variant.compare_at_price | money }}
+                {% if product.price < product.compare_at_price %}
+                  <span class="product-carousel__list-price compare">{{ product.compare_at_price | money }}</span>
                 {% endif %}
               </div>
               <a href="{{ product.url }}" class="product-carousel__list-btn">Add to Bag</a>
