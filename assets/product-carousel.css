@@ -1,6 +1,6 @@
 .product-carousel {
   position: relative;
-  padding-left: 12px;    
+  padding-left: 12px;   
 }
 
 .product-carousel__wrap-title {
@@ -12,6 +12,7 @@
 
 .product-carousel__slide {
   position: relative;
+  overflow: hidden;
 }
 
 .product-carousel__slide > .swiper-button-next,
