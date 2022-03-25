@@ -35,6 +35,20 @@
 }
 
 
+.product-carousel__tag-new {
+  display: inline-block;
+  background-color: #BC0000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #ffffff;
+  text-transform: upppercase;
+  letter-spacing: 0.386px;
+}
+
+
 .product-carousel__list-img {
   width: 300px;
   height: 400px;
