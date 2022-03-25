@@ -20,7 +20,7 @@
               </div>
               <h3 class="product-carousel__list-title">{{ product.title }}</h3>
               <p class="product-carousel__list-desc">{{ product.description }}</p>
-              <span class="product-carousel__list-price">{{ product.price }}</span>
+              <span class="product-carousel__list-price">{{ product.price | money }}</span>
               <a href="{{ product.url }}" class="product-carousel__list-btn">Add to Bag</a>
             </div>
           </li>
