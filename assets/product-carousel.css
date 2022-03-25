@@ -177,7 +177,7 @@
   
   .product-carousel__list-item {
     width: auto !important;
-    padding-right: 12px;
+    padding-right: 0;
   }
   
   .product-carousel__list-img {
