@@ -9,7 +9,7 @@
   <div class="product-carousel__wrap">
     <h2 class="product-carousel__wrap-title">{{ section.settings.carousel_title }}</h2>
 	
-    <div class="product-carousel__slide">
+    <div class="product-carousel__slide swiper-container">
       <ul class="product-carousel__list swiper-wrapper">
         {% for product in collections[section.settings.carousel_collection].products %}
           <li class="product-carousel__list-item swiper-slide">
