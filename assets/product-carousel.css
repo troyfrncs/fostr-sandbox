@@ -156,6 +156,10 @@
   z-index: -1;
 }
 
+.product-carousel__list-btn input {
+  width: 100%;
+}
+
 .product-carousel__list-btn:hover {
   background-color: #000000;
   color: #ffffff;
