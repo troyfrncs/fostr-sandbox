@@ -166,6 +166,12 @@
     padding-left: 24px;   
   }
   
+  .product-carousel__wrap {
+  	position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
   .product-carousel__wrap-title {
   	font-size: 36px;
   }
