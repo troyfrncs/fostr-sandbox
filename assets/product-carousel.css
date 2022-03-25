@@ -137,6 +137,7 @@
   border: 1px solid #000000;
   text-align: center;
   text-decoration: none;
+  cursor: pointer;  
   padding: 15px 50px; 
   transition: all 0.5s ease-out;
 }
@@ -165,6 +166,9 @@
 
 .product-carousel__list-btn:hover {
   background-color: #000000;
+}
+
+.product-carousel__list-btn:hover input {
   color: #ffffff;
 }
 
@@ -192,7 +196,7 @@
     font-size: 24px;
   }
 	
-  .product-carousel__list-btn {
+  .product-carousel__list-btn input {
   	font-size: 19px;
   }
 }
