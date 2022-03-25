@@ -36,11 +36,11 @@
                   <span class="product-carousel__list-price compare">{{ product.compare_at_price | money }}</span>
                 {% endif %}
               </div>
-              <a href="{{ product.url }}" class="product-carousel__list-btn">Add to Bag</a>
+<!--               <a href="{{ product.url }}" class="product-carousel__list-btn">Add to Bag</a> -->
               
               <form method="post" action="/cart/add">
                 <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-                <input min="1" type="number" id="quantity" name="quantity" value="1"/>
+                <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
                 <input type="submit" value="Add to cart" class="product-carousel__list-btn btn" />
               </form>
             </div>
