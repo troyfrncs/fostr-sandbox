@@ -169,7 +169,7 @@
   .product-carousel__wrap {
   	position: relative;
     width: 100%;
-    overflow: hidden;
+/*     overflow: hidden; */
   }
   
   .product-carousel__wrap-title {
