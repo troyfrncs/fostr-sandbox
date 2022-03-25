@@ -41,7 +41,9 @@
               <form method="post" action="/cart/add">
                 <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
                 <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
-                <input type="submit" value="Add to cart" class="product-carousel__list-btn btn" />
+                <div class="product-carousel__list-btn">
+                  <input type="submit" value="Add to Bag" class="btn" />
+                </div>
               </form>
             </div>
           </li>
