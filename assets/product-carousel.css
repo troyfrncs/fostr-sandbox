@@ -135,9 +135,6 @@
   background-color: #ffffff;
   position: relative;
   border: 1px solid #000000;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  color: #000000;
   text-align: center;
   text-decoration: none;
   padding: 15px 50px; 
@@ -157,7 +154,12 @@
 }
 
 .product-carousel__list-btn input {
+  appearance: none;
+  background-color: transparent;
   width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #000000;
 }
 
 .product-carousel__list-btn:hover {
