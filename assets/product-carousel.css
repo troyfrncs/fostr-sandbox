@@ -95,7 +95,7 @@
 
 .product-carousel__list-price.compare {
   color: #888888;
-  text-decoration: strikethrough;
+  text-decoration: line-through;
 }
 
 .product-carousel__list-btn {
