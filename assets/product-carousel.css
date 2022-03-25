@@ -156,6 +156,7 @@
 .product-carousel__list-btn input {
   appearance: none;
   background-color: transparent;
+  border: none;
   width: 100%;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
