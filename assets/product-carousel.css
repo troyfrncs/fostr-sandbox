@@ -182,7 +182,7 @@
   }
   
   .product-carousel__list-item {
-    width: auto !important;
+    width: 25% !important;
     padding-right: 0;
   }
   
