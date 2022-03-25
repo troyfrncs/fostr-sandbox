@@ -162,6 +162,7 @@
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   color: #000000;
+  cursor: pointer;
 }
 
 .product-carousel__list-btn:hover {
