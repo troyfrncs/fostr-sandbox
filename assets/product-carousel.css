@@ -57,7 +57,12 @@
 }
 
 .product-carousel__list-anchor {
+  text-decoration: none;
   font-size: 0;
+}
+
+.product-carousel__list-anchor:hover {
+  text-decoration: none;
 }
 
 
