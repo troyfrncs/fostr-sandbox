@@ -14,13 +14,14 @@
         {% for product in collections[section.settings.carousel_collection].products %}
           <li class="product-carousel__list-item swiper-slide">
             <div class="product-carousel__list-wrap">
+              <a href="{{ product.url }}" class="product-carousel__list-anchor" aria-label="{{ product.title | escape }}"></a>
               <div class="product-carousel__list-img">
                 <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" />
               </div>
               <h3 class="product-carousel__list-title">{{ product.title }}</h3>
               <p class="product-carousel__list-desc">{{ product.description }}</p>
               <span class="product-carousel__list-price">{{ product.price }}</span>
-              <a href="" class="product-carousel__list-btn">Add to Bag</a>
+              <a href="{{ product.url }}" class="product-carousel__list-btn">Add to Bag</a>
             </div>
           </li>
         {% endfor %}
