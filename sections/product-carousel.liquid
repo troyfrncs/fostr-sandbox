@@ -14,7 +14,7 @@
         {% for product in collections[section.settings.carousel_collection].products %}
           <li class="product-carousel__list-item swiper-slide">
             <div class="product-carousel__list-wrap">
-              <a href="{{ product.url }}" class="product-carousel__list-anchor" aria-label="{{ product.title | escape }}"></a>
+              <a href="{{ product.url }}" class="product-carousel__list-anchor">{{ product.title | escape }}</a>
               <div class="product-carousel__list-img">
                 <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" />
               </div>
