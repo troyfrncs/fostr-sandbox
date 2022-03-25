@@ -39,8 +39,8 @@
   display: inline-block;
   background-color: #BC0000;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 16px;
+  left: 24px;
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   color: #ffffff;
