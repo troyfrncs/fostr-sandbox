@@ -15,6 +15,9 @@
           <li class="product-carousel__list-item swiper-slide">
             <div class="product-carousel__list-wrap">
               <a href="{{ product.url }}" class="product-carousel__list-anchor">{{ product.title | escape }}</a>
+              {% if product_tags_string contains 'New' %}
+              	<span class="product-carousel__list-tag new">new</span>
+              {% endif %}
               <div class="product-carousel__list-img">
                 <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" />
               </div>
