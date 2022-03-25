@@ -181,9 +181,16 @@
   	display: block;
   }
   
+  .product-carousel__list {
+  	margin-right: -12px;
+    margin-left: -12px;
+  }
+  
   .product-carousel__list-item {
+    max-width: 330px;
     width: 25% !important;
-    padding-right: 0;
+    padding-right: 12px;
+    padding-left: 12px;
   }
   
   .product-carousel__list-img {
